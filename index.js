@@ -6,7 +6,15 @@ const TaskRoutes = require("./routes/TaskRoutes");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+app.use(
+  cors({
+    origin: "https://taskbook001.vercel.app/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // Allow cookies if needed
+  })
+);
+
 ConnectDB();
 
 app.use("/", authRoutes);
