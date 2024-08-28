@@ -11,7 +11,7 @@ const {
 const router = express.Router();
 
 // routes for get update delete
-router.post("/tasks", authMiddleware, createTask);
+router.post("/tasks", createTask);
 
 router.get("/tasks", authMiddleware, getTask);
 
