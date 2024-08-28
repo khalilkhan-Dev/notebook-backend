@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://taskbook001.vercel.app/",
+    origin: "https://taskbook001.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, // Allow cookies if needed
   })
