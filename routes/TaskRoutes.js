@@ -13,7 +13,7 @@ const router = express.Router();
 // routes for get update delete
 router.post("/tasks", createTask);
 
-router.get("/tasks", authMiddleware, getTask);
+router.get("/tasks", getTask);
 
 router.get("/tasks/:id", authMiddleware, taskById);
 
