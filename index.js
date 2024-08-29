@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const ConnectDB = require("./config/db");
@@ -7,13 +8,7 @@ const TaskRoutes = require("./routes/TaskRoutes");
 const app = express();
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: "https://taskbook001.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // Allow cookies if needed
-  })
-);
+app.use(cors());
 
 ConnectDB();
 
